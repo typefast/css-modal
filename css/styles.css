@@ -1,0 +1,90 @@
+
+/*******************
+	General styling
+*******************/
+
+body {
+	font-family: sans-serif;
+}
+
+label {
+	margin-top: 2em;
+	font-size: 1.5em;
+}
+
+h1 {
+	font-size: 2em;
+	margin-bottom: 2em;
+}
+
+.wrapper {
+	text-align: center;
+	margin: 0 auto;
+	
+}
+
+/*******************
+	Modal div styling
+*******************/
+
+.modal {
+	position: absolute;
+	top: -500px;
+	margin-top: 4em;
+	padding: 5em 0;
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	opacity: 0;
+	z-index: 100;
+	transform: scale(.25);
+	transition: all 1s ease;
+}
+
+.modal > label {
+	display: inline-block;
+	color: white;
+	padding: 1em 2em;
+	background: #181;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/*******************
+	Modal Launch Button styling
+*******************/
+
+#modalButton {
+	position: absolute;
+	top: -1000px;
+}
+
+#modalButton + label {
+	display: inline-block;
+	color: white;
+	padding: 1em 2em;
+	background: #181;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#modalButton + label:hover {
+	background-color: #1a1;
+}
+
+/*******************
+	transitions and :checked state styling
+*******************/
+
+#modalButton:checked ~ .modal{
+	opacity: 1;
+	transform: scale(1);
+	z-index: 200;
+	top: -4em;
+	bottom: 0;
+}
+
+
+
+
+
